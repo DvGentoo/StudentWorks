@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def get_array( ) :
     switch = True
     array = []
