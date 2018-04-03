@@ -9,7 +9,6 @@ int main()
     printf("Please enter symbol: ");
     char symbol = getSymbol();
 
-    printf("Please enter height of pyramid: ");
     int height = getPositiveNumber();
 
     pyramid(symbol,height);
@@ -26,20 +25,16 @@ char getSymbol(void)
 
 int getPositiveNumber(void)
 {
-    int number;
-    int countCall = 0;
+    int num;
 
     do
     {
-        if(countCall != 0)
-        {
-            printf("Try repeat: ");
-            scanf("%i",&number);
-            continue;
-        }
-        scanf("%i",&number);
+        printf("Please enter height of pyramid: ");
+        scanf("%i",&num);
     }
-    while(number < 0 && number == NULL);
+    while(num <= 0);
+
+    return num;
 }
 
 int pyramid(char symbol,int height)
